@@ -1,41 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList; // import the ArrayList class
 
 public class ejercicio1 {
     public static void main(String[] args) {
-        ArrayList<String> ciudades = new ArrayList<String>();
-
-        cargarCiudades
-
-        mostrarCiudades
-        
+    List<String> ciudades= new ArrayList<>();
+    System.out.print("¿Cuantas ciudades va a cargar?: ");
+    Scanner leer = new Scanner(System.in);
+    int cant= leer.nextInt();
+    
+    cargarCiudades(ciudades,cant);
+    mostrarCiudades(ciudades,cant);
     }
-        
-        
-        
-    private static void cargarCiudades(List<String> ciudades) {
-        System.out.println("Tus ciudades favoritas son:");
-        String salir= "";
-        
-                while (salir!="") {
-                    System.out.print("ingrese ciudad: ");
-                    Scanner leer = new Scanner(System.in);
-                    ciudades.add(leer.nextLine());
-                    cont++;
-                }
-
-
-
-        
+    
+    private static void cargarCiudades(List<String> ciudades, int cant){
+    Scanner lect= new Scanner(System.in);
+    for (int i = 0; i < cant; i++) {
+        System.out.print("Ingresar ciudad:"); 
+        ciudades.add(lect.nextLine());  
     }
-        
-        int cont=0;
-        ArrayList<String> list1 = new ArrayList<String>();
-        
-        for (int i = 0; i < cont-1; i++) {
-            System.out.println("#"+ i + "-" + list1.get(i+1));
+    
+    }
+    
+    private static void mostrarCiudades(List<String> ciudades,int cant){
+        for (int i = 0; i < cant; i++) {
+            System.out.println("#"+(i+1)+" - "+ciudades.get(i)); 
         }
-    }
+    } 
+    
+}
 
 
 
